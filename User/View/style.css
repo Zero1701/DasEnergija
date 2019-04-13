@@ -1,0 +1,701 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+Theme Name: Ilium
+Description: Blank Wordpress Theme
+Version: 3.1
+Author: Ivan Dorić
+Author URI: http://www.ivandoric.com/
+Tags: starter theme, light, jQuery, flexslider
+
+	The CSS, XHTML is released under GPL:
+	http://www.opensource.org/licenses/gpl-license.php
+
+*/
+
+
+
+
+/* ----------------------------------------------*/
+
+/* IMPORTS
+/* ----------------------------------------------*/
+@import url(normalize.css);
+
+
+
+
+/* ----------------------------------------------*/
+
+/* GLOBAL
+/* ----------------------------------------------*/
+
+body{
+	background:#efefef;
+        color:#464646;
+}
+
+#container{
+	width:90%;
+	margin:0 auto 40px auto;
+	position:relative;
+	background:#fff;
+        -webkit-box-shadow: 0px 0px 40px rgba(50, 50, 50, 0.35);
+        -moz-box-shadow:    0px 0px 40px rgba(50, 50, 50, 0.35);
+        box-shadow:         0px 0px 40px rgba(50, 50, 50, 0.35);
+}
+
+
+/*=================================
+= Clearings =======================*/
+
+/* float clearing for IE6 */
+* html .clearfix{
+  height: 1%;
+  overflow: visible;
+}
+
+/* float clearing for IE7 */
+*+html .clearfix{
+  min-height: 1%;
+}
+
+/* float clearing for everyone else */
+.clearfix:after{
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
+}
+
+.clr{clear:both;}
+
+/* ----------------------------------------------*/
+
+/* HEADER
+/* ----------------------------------------------*/
+
+.header{
+        padding:10px;
+        background: #37aae0;
+        font-size: 12px;
+}
+
+.logout-front{
+        float:left;
+}
+
+.logout-front a{
+        color:#fff;
+        text-decoration: underline;
+}
+
+.logout-front a:hover{
+        text-decoration: none;
+}
+
+.admin{
+        float:right;
+        color:#234163;
+}
+
+/* ----------------------------------------------*/
+
+/* CONTENT
+/* ----------------------------------------------*/
+
+.content{
+        padding:20px;
+}
+
+/* ----------------------------------------------*/
+
+/* BUTTONS / SEARCHBAR
+/* ----------------------------------------------*/
+
+ul.nav{
+        list-style: none;
+        padding:0;
+        margin:-20px -20px 20px -20px;
+        background: #f7ffda;
+        padding:20px;
+}
+
+ul.nav li{
+        float:left;
+}
+
+ul.nav li a{
+        display: block;
+        height: 30px;
+        width:180px;
+        background:url(images/bg-buttons.jpg) repeat-x top left;
+        border:1px solid #d6d5d5;
+        margin-left: 10px;
+        text-decoration: none;
+        color:#464646;
+        font-size: 12px;
+        padding:4px 10px 0 10px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+}
+
+ul.nav li a:hover{
+        background-position: bottom;
+}
+
+ul.nav li.first a{
+        margin-left: 0;
+}
+
+ul.nav li a span{
+        display: block;
+        height: 20px;
+        padding:5px 0 0 35px;
+}
+
+ul.nav li.kreiraj .icon{
+        background:url(images/kreiraj.png) no-repeat top left;
+}
+
+ul.nav li.izvjestaji .icon{
+        background:url(images/izvjestaj.png) no-repeat top left;
+}
+
+ul.nav li.o-suradnicima .icon{
+        background:url(images/suradnici.png) no-repeat top left;
+}
+
+ul.nav li.o-ukupnom-stanju .icon{
+        background:url(images/ukupno.png) no-repeat top left;
+}
+
+/*=================================
+= Pretraga =======================*/
+
+form.pretraga{
+        background: #b2cc23;
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-top:-20px;
+        padding:10px 10px 10px 20px;
+        margin-bottom: 20px;
+}
+
+form.pretraga input{
+        border:1px solid #92b125;
+        padding:5px;
+        width:40%;
+        color:#aaa;
+        font-size: 14px;
+}
+
+form.pretraga input:focus{
+        color:#464646;
+}
+
+form.pretraga input.pretraga-submit{
+        width:100px;
+        border:1px solid #ceeb39;
+        background: #84a725;
+        color:#fff;
+        text-transform: uppercase;
+        font-size: 12px;
+        -webkit-box-shadow: 0px 0px 4px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow:    0px 0px 4px rgba(50, 50, 50, 0.75);
+        box-shadow:         0px 0px 4px rgba(50, 50, 50, 0.75);
+        margin-left: 10px;
+}
+
+form.pretraga input.pretraga-submit:hover{
+        background: #91b32c;
+        -webkit-box-shadow: 0px 0px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow:    0px 0px 0px rgba(50, 50, 50, 0.75);
+        box-shadow:         0px 0px 0px rgba(50, 50, 50, 0.75);
+}
+
+
+/*=======================================
+= Incoming / Done =======================*/
+
+ul.incoming-done{
+        list-style: none;
+        padding:0;
+        margin:0;
+
+}
+
+ul.incoming-done li{
+        float:left;
+}
+
+ul.incoming-done li a{
+        display: block;
+        padding:10px 10px 10px 35px;
+        text-decoration: none;
+        color:#464646;
+        font-size: 14px;
+}
+
+ul.incoming-done li.first a{
+        border-right:1px solid #fff;
+}
+
+ul.incoming-done li.incoming a{
+        background:#efefef url(images/incoming.png) no-repeat 10px center;
+}
+
+ul.incoming-done li.incoming a:hover,
+ul.incoming-done li.incoming a.active{
+        background:#b9e7ff url(images/incoming.png) no-repeat 10px center;
+}
+
+ul.incoming-done li.done a{
+        background:#efefef url(images/done.png) no-repeat 10px center;
+}
+
+ul.incoming-done li.done a:hover,
+ul.incoming-done li.done a.active{
+        background:#b9e7ff url(images/done.png) no-repeat 10px center;
+}
+
+
+/* ----------------------------------------------*/
+
+/* POCETNA TABLICA
+/* ----------------------------------------------*/
+
+table.pocetna-table{
+        border:5px solid #b9e7ff;
+        font-size: 13px;
+        width:100%;
+}
+
+table.pocetna-table thead tr{
+        background-color: #3d689d;
+}
+
+table.pocetna-table thead th{
+        text-align: left;
+        color:#fff;
+        padding: 10px;
+        border-left:1px solid #bfd6f2;
+}
+
+table.pocetna-table td{
+        padding:10px;
+        border-left:1px solid #efefef;
+}
+
+table.pocetna-table tr.odd{
+        background-color: #f3f8fe; 
+}
+
+table.pocetna-table td.delete a,
+table.pocetna-table td.edit a{
+        display: block;
+        width:24px;
+        height: 24px;
+        text-indent: -9999px;
+}
+
+table.pocetna-table td.delete a{
+        background:url(images/delete.png) no-repeat top left;
+        margin:0;
+        padding: 0;
+}
+
+table.pocetna-table td.edit a{
+        background:url(images/edit.png) no-repeat top left;
+}
+
+
+/* ----------------------------------------------*/
+
+/* KREIRAJ NOVO
+/* ----------------------------------------------*/
+h1.kreiraj-title{
+        background: #b2cc23;
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-top:-20px;
+        padding:20px;
+        color:#fff;
+}
+
+.new-project-form{
+        font-size: 14px;
+        border:4px solid #b2cc23;
+        /*background-color: #b2cc23;*/
+}
+
+.left{float:left; width:40%;}
+.right{
+        float:left; width:40%; 
+        padding: 0 0 20px 20px; 
+        border-left:1px solid #ccc;
+
+}
+
+ul.stranice{
+        list-style: none;
+        padding:0;
+        margin:10px 0 0 0;
+}
+
+ul.stranice li{
+        float:left;
+}
+
+ul.stranice li a{
+        display: block;
+        width:200px;
+        background-color: #ccc;
+        color:#efefef;
+        padding:10px;
+        margin-left: 1px;
+        text-decoration: none;
+        font-weight: bold;
+}
+
+ul.stranice li.first a{
+        margin-left: 0
+}
+
+ul.stranice li.active a{
+        background-color: #b2cc23;
+        color:#fff;
+}
+
+ul.stranice li a:hover{
+        background-color: #AFF260;
+        color:#fff;
+}
+
+p.korisnik{
+        font-size: 14px;
+        color:#999;
+}
+
+p.korisnik strong{
+        color:#464646;
+        font-weight: normal;
+}
+
+/*=======================================
+= Sizes =================================*/
+
+.small{width:30%;}
+.medium{width:50%;}
+.large{width:90%;}
+
+
+
+
+/*==============================================
+= Ime projekta =================================*/
+.ime-projekta{
+        padding:20px;
+        background: #b2cc23;
+}
+
+.ime-projekta label{
+        font-size: 24px;
+        font-weight: bold;
+        color:#fff;
+}
+
+.ime-projekta input{
+        font-size: 18px;
+        padding: 5px;
+        width:50%;
+}
+
+
+
+/*==============================================
+= Forma ========================================*/
+
+.new-project-form label{   
+        display: block;
+        margin: 10px 0 5px 0;
+}
+
+.new-project-form label.chcklabel{
+        display: inline;
+}
+
+.new-project-form input,
+.new-project-form select{
+        padding:3px;
+        
+}
+
+.new-project-form input.checkbox{
+        width:auto;
+}
+
+.new-project-form textarea{
+        height: 100px;
+        width:75%;
+}
+
+.new-project-form form{
+        padding:5px 0;
+}
+
+.new-project-form input.obrisi{
+        background:url(images/delete.png) no-repeat top left;
+        width:24px;
+        height: 24px;
+        border:none;
+        text-indent: -9999px;
+        padding:0;
+        float:left;
+}
+
+.new-project-form .prevdiv a{
+        display:block;
+        background:url(images/download.png) no-repeat top left;
+        width:24px;
+        height: 24px;
+        border:none;
+        text-indent: -9999px;
+        float:left;
+}
+
+.new-project-form .prevdiv img{float:left;}
+
+.new-project-form .slika{
+        padding:5px;
+        background-color: #fff;
+        border:1px solid #ccc;
+        margin-bottom: 10px;
+}
+
+/*==============================================
+= Save / Cancel=================================*/
+
+.new-project-form input.save{
+        width:204px;
+        height: 37px;
+        background:url(images/save.png) no-repeat top left;
+        border:none;
+        text-indent: -9999px;
+        display:block; 
+        line-height: 0;
+        float:left;
+}
+
+.new-project-form input.cancel{
+        width:204px;
+        height: 37px;
+        background:url(images/odustani.png) no-repeat top left;
+        border:none;
+        text-indent: -9999px;
+        margin-left: 20px;
+        display:block; 
+        line-height: 0;
+        float:left;
+}
+
+.new-project-form input.save:hover,
+.new-project-form input.cancel:hover{
+        background-position: bottom;
+}
+
+/*==============================================
+= Divovi =======================================*/
+
+.evenp,
+.oddp{
+        padding:20px 20px 20px 10%;
+        border-bottom: 1px solid #b2cc23;
+        /*-webkit-box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.25);
+        -moz-box-shadow:    0px 0px 15px rgba(50, 50, 50, 0.25);
+        box-shadow:         0px 0px 15px rgba(50, 50, 50, 0.25);*/
+}
+
+.evenp{
+        
+       background-color: #f7ffda;
+        /*border:1px solid #9eb648;*/
+}
+
+.oddp{
+     background-color: #daedff;  
+     /*border:1px solid #72afe8;*/
+}
+
+.save-cancel{
+        padding:20px; 
+        background: #b2cc23;        
+
+}
+
+/*.obrub{
+        padding:5px;
+        border:1px solid #ccc;
+        margin-bottom: 5px;
+}
+
+.evenp .obrub{
+        background: #e2ebc2;
+}
+
+.oddp .obrub{
+        background: #b8d1e8;
+}*/
+
+
+
+
+
+/* ----------------------------------------------*/
+
+/* IZVJESTAJ O SURADNICIMA
+/* ----------------------------------------------*/
+
+
+
+ul.quick-overview{
+    list-style: none;
+    padding:20px;
+    margin:0 -20px;
+    background-color: #efefef;
+}
+
+ul.quick-overview li{
+        float:left;
+        margin-left:20px;
+        font-size: 14px;
+        background: #fff;
+        padding:5px;
+}
+
+ul.quick-overview li.first{
+        
+}
+
+ul.quick-overview li span{
+        display: block;
+        background-color: #3d689d;
+        color:#fff;
+        text-align: center;
+        padding:20px;
+        font-size: 24px;
+        margin-top:10px;
+        font-weight: bold;
+        -webkit-box-shadow: 0px 0px 15px rgba(50, 50, 50, 0.25);
+        -moz-box-shadow:    0px 0px 15px rgba(50, 50, 50, 0.25);
+        box-shadow:         0px 0px 15px rgba(50, 50, 50, 0.25);
+}
+
+ul.long-overview{
+        list-style: none;
+        margin:0 -20px;
+        padding:20px;
+        background-color: #faffe3
+}
+
+ul.long-overview li{
+        padding:10px 0;
+        border-bottom: 1px solid #dfec9d;
+        font-size: 14px;
+        color:#8fa036;
+}
+
+ul.long-overview li span{
+        font-size: 16px;
+        font-weight: bold;
+        color:#687620;
+}
+
+
+/*=======================================
+= Uploads ===============================*/
+
+.project-overview{
+        border:4px solid #3d6fa4;
+        background: #c3eafd;
+        margin:20px 0;
+}
+
+.project-overview h4{
+        padding:10px;
+        color:#fff;
+        background:#3d6fa4;
+        margin:0; 
+}
+
+.project-overview ul{
+        list-style: none;
+        padding: 20px;
+        margin:0;
+}
+
+.project-overview ul li{
+        padding:10px 0;
+        border-bottom: 1px solid #91cae5;
+        font-size: 14px;
+        color:#448fb3;
+}
+
+.project-overview ul li span{   
+        font-weight: bold;
+        color:#2c7091;
+}
+
+
+/* ----------------------------------------------*/
+
+/* UKUPNO STANJE
+/* ----------------------------------------------*/
+
+.kreiraj-title.rep{
+        margin-bottom: 0;
+}
+
+ul.reports{
+        list-style: none;
+        padding:0;
+        margin:20px 0;
+}
+
+ul.reports li.report-title{
+        width:25%;
+        font-size: 18px;
+        font-weight: bold;
+        border:none;
+        padding-left: 20px;
+        background-color: #ddeead;
+}
+
+ul.reports li{
+        padding:10px 0;
+        border-bottom: 1px solid #cee38e;
+        font-size: 14px;
+        background: #f2fadb;
+        padding-left: 20px;
+}
+
+ul.reports li span{
+        font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
